@@ -9,7 +9,7 @@
       font-family: 'Segoe UI', sans-serif;
       padding: 30px;
       background: #303337;
-      color: #c9c9c9;
+      color: #000000;
     }
 
     h1 {
@@ -67,9 +67,10 @@
     #output {
       margin-top: 30px;
       padding: 20px;
-      background: #ffffff;
+      background: #b5b2b2;
       border-radius: 12px;
       max-width: 700px;
+      color: #0d0d0d;
       margin: 30px auto;
       white-space: pre-line;
       font-family: monospace;
@@ -333,46 +334,7 @@ select {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
 <script>
-//   function generarRol() {
-//   const f = document.forms["rolForm"];
-//   const dia = f.dia.value;
-//   const obs = f.obs.value.trim();
 
-//   if (!dia) {
-//     alert("Por favor, selecciona un día antes de generar el rol.");
-//     return;
-//   }
-  
-
-//   let rol = `ROL PARA ${dia}
-
-// LOBBY    A    =>  ${f.lobbyA.value}
-// LOBBY    B    =>  ${f.lobbyB.value}
-// LOBBY    C    =>  ${f.lobbyC.value}
-// LOBBY    D    =>  ${f.lobbyD.value}
-// PASILLO        =>  ${f.pasillo.value}
-// PISO CAFE    =>  ${f.pisoCafe.value}
-
-// BLOQ   A      =>  ${f.bloqA.value}
-
-// BLOQ   B  
-// DEL 12 AL 7 => ${f.bloqB1.value}
-// DEL 6 AL 1   => ${f.bloqB2.value}
-
-// BLOQ C
-// BARRIDO Y BARANDAS=> ${f.barrido.value}
-// ENGOMADO DEL 12 AL 7 => ${f.engomado1.value}
-// ENGOMADO DEL 6 AL SOTANO => ${f.engomado2.value}
-// PISO BLANCO => ${f.pisoBlanco.value}
-
-// BLOQ D  => ${f.bloqD.value}`;
-
-//   if (obs !== "") {
-//     rol += `\n\nOBSERVACIONES:\n- ${obs}`;
-//   }
-
-//   document.getElementById("output").innerText = rol;
-// }
 function generarRol() {
   const form = document.getElementById("rolForm");
   const selects = form.querySelectorAll("select[required]");
@@ -388,13 +350,25 @@ function generarRol() {
 
   const obs = form.obs.value.trim();
 
-  // Aquí continúa tu lógica para generar el rol
+  /* // Aquí continúa tu lógica para generar el rol */
   let rol = `🗓️ *ROL DE TRABAJO - ${dia.toUpperCase()}* 🗓️\n\n`;
 
-  selects.forEach(select => {
+
+  /* selects.forEach(select => {
     const label = form.querySelector(`label[for="${select.id}"]`);
     rol += `*${label.innerText}* — ${select.value}\n`;
-  });
+  }); */
+  selects.forEach(select => {
+  // Excluye el select con id="dia"
+  if (select.id !== "dia") {
+    const label = form.querySelector(`label[for="${select.id}"]`);
+    if (label) {
+      rol += `*${label.innerText}* — ${select.value}\n`;
+    }
+  }
+});
+
+
 
   if (obs) {
     rol += `\n📝 *OBSERVACIONES:* ${obs}`;
