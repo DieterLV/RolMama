@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rol de Trabajo</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      padding: 30px;
+      background: #f5f7fa;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    form {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 12px;
+      max-width: 700px;
+      margin: auto;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+    }
+
+    select, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-top: 5px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 60px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      width: 48%;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    #output {
+      margin-top: 30px;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 12px;
+      max-width: 700px;
+      margin: 30px auto;
+      white-space: pre-line;
+      font-family: monospace;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .buttons {
+      display: flex;
+      gap: 4%;
+      justify-content: center;
+    }
+    .sector {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+select {
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 600px) {
+  .sector {
+    grid-template-columns: 1fr; /* Solo una columna */
+  }
+
+  button {
+    width: 100% !important; /* Los botones toman todo el ancho */
+    margin-bottom: 10px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  form {
+    padding: 15px;
+    margin: 15px;
+  }
+
+  </style>
+</head>
+<body>
+
+<h1>ROL DE TRABAJO</h1>
+
+<form id="rolForm">
+  <label for="dia">Seleccionar día:</label>
+  <select name="dia" id="dia" required>
+    <option value="">-- Selecciona un día --</option>
+    <option value="LUNES">LUNES</option>
+    <option value="MARTES">MARTES</option>
+    <option value="MIÉRCOLES">MIÉRCOLES</option>
+    <option value="JUEVES">JUEVES</option>
+    <option value="VIERNES">VIERNES</option>
+    <option value="SÁBADO">SÁBADO</option>
+    <option value="DOMINGO">DOMINGO</option>
+  </select>
+
+  <div class="sector">
+  <div class="campo">
+    <label for="lobbyA">Lobby A:</label>
+    <select name="lobbyA" id="lobbyA" required>
+      <option value="">-- Seleccionar --</option>
+      <option>IVANA</option>
+      <option>REBECA</option>
+      <option>CARLA</option>
+      <option>JIMENA</option>
+      <option>MIRIAM</option>
+    </select>
+  </div>
+  
+  <div class="campo">
+    <label for="lobbyB">Lobby B:</label>
+    <select name="lobbyB" id="lobbyB" required>
+      <option value="">-- Seleccionar --</option>
+      <option>IVANA</option>
+      <option>REBECA</option>
+      <option>CARLA</option>
+      <option>JIMENA</option>
+      <option>MIRIAM</option>
+    </select>
+  </div>
+
+  <div class="campo">
+    <label for="lobbyC">Lobby C:</label>
+    <select name="lobbyC" id="lobbyC" required>
+      <option value="">-- Seleccionar --</option>
+      <option>IVANA</option>
+      <option>REBECA</option>
+      <option>CARLA</option>
+      <option>JIMENA</option>
+      <option>MIRIAM</option>
+    </select>
+  </div>
+
+  <div class="campo">
+    <label for="lobbyD">Lobby D:</label>
+    <select name="lobbyD" id="lobbyD" required>
+      <option value="">-- Seleccionar --</option>
+      <option>IVANA</option>
+      <option>REBECA</option>
+      <option>CARLA</option>
+      <option>JIMENA</option>
+      <option>MIRIAM</option>
+    </select>
+  </div>
+
+  <div class="campo">
+    <label for="pasillo">Pasillo:</label>
+    <select name="pasillo" id="pasillo" required>
+      <option value="">-- Seleccionar --</option>
+      <option>IVANA</option>
+      <option>REBECA</option>
+      <option>CARLA</option>
+      <option>JIMENA</option>
+      <option>MIRIAM</option>
+    </select>
+  </div>
+
+  <div class="campo">
+    <label for="pisoCafe">Piso Café:</label>
+    <select name="pisoCafe" id="pisoCafe" required>
+      <option value="">-- Seleccionar --</option>
+      <option>IVANA</option>
+      <option>REBECA</option>
+      <option>CARLA</option>
+      <option>JIMENA</option>
+      <option>MIRIAM</option>
+    </select>
+  </div>
+
+  <div class="campo">
+    <label for="bloqA">Bloq A:</label>
+    <select name="bloqA" id="bloqA" required>
+      <option value="">-- Seleccionar --</option>
+      <option>IVANA</option>
+      <option>REBECA</option>
+      <option>CARLA</option>
+      <option>JIMENA</option>
+      <option>MIRIAM</option>
+    </select>
+  </div>
+
+  <div class="campo">
+    <label for="bloqB1">Bloq B (12 al 7):</label>
+    <select name="bloqB1" id="bloqB1" required>
+      <option value="">-- Seleccionar --</option>
+      <option>IVANA</option>
+      <option>REBECA</option>
+      <option>CARLA</option>
+      <option>JIMENA</option>
+      <option>MIRIAM</option>
+    </select>
+  </div>
+
+  <div class="campo">
+    <label for="bloqB2">Bloq B (6 al 1):</label>
+    <select name="bloqB2" id="bloqB2" required>
+      <option value="">-- Seleccionar --</option>
+      <option>IVANA</option>
+      <option>REBECA</option>
+      <option>CARLA</option>
+      <option>JIMENA</option>
+      <option>MIRIAM</option>
+    </select>
+  </div>
+
+  <div class="campo">
+    <label for="barrido">Barrido y Barandas:</label>
+    <select name="barrido" id="barrido" required>
+      <option value="">-- Seleccionar --</option>
+      <option>IVANA</option>
+      <option>REBECA</option>
+      <option>CARLA</option>
+      <option>JIMENA</option>
+      <option>MIRIAM</option>
+    </select>
+  </div>
+
+  <div class="campo">
+    <label for="engomado1">Engomado (12 al 7):</label>
+    <select name="engomado1" id="engomado1" required>
+      <option value="">-- Seleccionar --</option>
+      <option>IVANA</option>
+      <option>REBECA</option>
+      <option>CARLA</option>
+      <option>JIMENA</option>
+      <option>MIRIAM</option>
+    </select>
+  </div>
+
+  <div class="campo">
+    <label for="engomado2">Engomado (6 al Sótano):</label>
+    <select name="engomado2" id="engomado2" required>
+      <option value="">-- Seleccionar --</option>
+      <option>IVANA</option>
+      <option>REBECA</option>
+      <option>CARLA</option>
+      <option>JIMENA</option>
+      <option>MIRIAM</option>
+    </select>
+  </div>
+
+  <div class="campo">
+    <label for="pisoBlanco">Piso Blanco:</label>
+    <select name="pisoBlanco" id="pisoBlanco" required>
+      <option value="">-- Seleccionar --</option>
+      <option>IVANA</option>
+      <option>REBECA</option>
+      <option>CARLA</option>
+      <option>JIMENA</option>
+      <option>MIRIAM</option>
+    </select>
+  </div>
+
+  <div class="campo">
+    <label for="bloqD">Bloq D:</label>
+    <select name="bloqD" id="bloqD" required>
+      <option value="">-- Seleccionar --</option>
+      <option>IVANA</option>
+      <option>REBECA</option>
+      <option>CARLA</option>
+      <option>JIMENA</option>
+      <option>MIRIAM</option>
+    </select>
+  </div>
+</div>
+
+
+  <!-- Observaciones -->
+  <label for="obs">Observaciones (opcional):</label>
+  <textarea id="obs" name="obs" placeholder="Ej. No olvidar revisar barandas, llevar materiales, etc."></textarea>
+
+  <div class="buttons">
+    <button type="button" onclick="generarRol()">Generar Rol</button>
+    <button type="button" onclick="capturarComoImagen()">Guardar como Imagen</button>
+    <button type="button" onclick="vaciarCampos()">Vaciar Campos</button>
+<button type="button" onclick="copiarTexto()">Copiar Texto</button>
+
+  </div>
+</form>
+
+<div id="output"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<script>
+//   function generarRol() {
+//   const f = document.forms["rolForm"];
+//   const dia = f.dia.value;
+//   const obs = f.obs.value.trim();
+
+//   if (!dia) {
+//     alert("Por favor, selecciona un día antes de generar el rol.");
+//     return;
+//   }
+  
+
+//   let rol = `ROL PARA ${dia}
+
+// LOBBY    A    =>  ${f.lobbyA.value}
+// LOBBY    B    =>  ${f.lobbyB.value}
+// LOBBY    C    =>  ${f.lobbyC.value}
+// LOBBY    D    =>  ${f.lobbyD.value}
+// PASILLO        =>  ${f.pasillo.value}
+// PISO CAFE    =>  ${f.pisoCafe.value}
+
+// BLOQ   A      =>  ${f.bloqA.value}
+
+// BLOQ   B  
+// DEL 12 AL 7 => ${f.bloqB1.value}
+// DEL 6 AL 1   => ${f.bloqB2.value}
+
+// BLOQ C
+// BARRIDO Y BARANDAS=> ${f.barrido.value}
+// ENGOMADO DEL 12 AL 7 => ${f.engomado1.value}
+// ENGOMADO DEL 6 AL SOTANO => ${f.engomado2.value}
+// PISO BLANCO => ${f.pisoBlanco.value}
+
+// BLOQ D  => ${f.bloqD.value}`;
+
+//   if (obs !== "") {
+//     rol += `\n\nOBSERVACIONES:\n- ${obs}`;
+//   }
+
+//   document.getElementById("output").innerText = rol;
+// }
+function generarRol() {
+  const form = document.getElementById("rolForm");
+  const selects = form.querySelectorAll("select[required]");
+  const dia = form.dia.value;
+
+  // Validar que todos los campos obligatorios estén seleccionados
+  for (let select of selects) {
+    if (!select.value) {
+      alert("Por favor, completa todos los sectores antes de generar el rol.");
+      return;
+    }
+  }
+
+  const obs = form.obs.value.trim();
+
+  // Aquí continúa tu lógica para generar el rol
+  let rol = `🗓️ *ROL DE TRABAJO - ${dia.toUpperCase()}* 🗓️\n\n`;
+
+  selects.forEach(select => {
+    const label = form.querySelector(`label[for="${select.id}"]`);
+    rol += `*${label.innerText}* — ${select.value}\n`;
+  });
+
+  if (obs) {
+    rol += `\n📝 *OBSERVACIONES:* ${obs}`;
+  }
+
+  document.getElementById("output").innerText = rol;
+}
+
+
+
+  function capturarComoImagen() {
+    html2canvas(document.querySelector("#output")).then(canvas => {
+      const link = document.createElement("a");
+      link.download = "rol_trabajo.png";
+      link.href = canvas.toDataURL();
+      link.click();
+    });
+  }
+
+  function vaciarCampos() {
+  document.getElementById("rolForm").reset();
+  document.getElementById("output").innerText = "";
+}
+
+function copiarTexto() {
+  const output = document.getElementById("output").innerText;
+  if (!output.trim()) {
+    alert("No hay texto para copiar.");
+    return;
+  }
+
+  navigator.clipboard.writeText(output)
+    .then(() => {
+      alert("Texto copiado al portapapeles.");
+    })
+    .catch(err => {
+      alert("Error al copiar: " + err);
+    });
+}
+
+</script>
+
+</body>
+</html>
